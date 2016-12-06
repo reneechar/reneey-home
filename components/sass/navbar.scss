@@ -1,0 +1,93 @@
+@import '_colors.scss';
+
+
+#logo {
+  flex: 0 0 80px;
+  height: 80px;
+  background: $yi-ding;
+  margin: 15px;
+}
+
+#logoLink {
+  flex: 0 0 110px;
+}
+
+#container {
+  background-color: $lilac-candy;
+  height: 100px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  box-shadow: 3px 3px 5px #888888;
+}
+
+#linkContainer {
+  flex: 0 0 300px;
+  display: flex;
+  align-items: center;
+}
+
+#linkUl li {
+  font-size: 18px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px;
+}
+
+#homeLi {
+  flex: 0 0 60px;
+}
+
+#aboutLi {
+  flex: 0 0 70px;
+}
+
+#contactLi {
+  flex: 0 0 90px;
+}
+
+.links {
+  text-decoration: none;
+  color: $soulful-white;
+  flex: 0 0 100px;
+  text-align: center;
+  &:hover + .underline {
+    transition: 0.5s;
+    visibility: visible;
+  }
+}
+
+.underline {
+  visibility: hidden;
+  height: 5px;
+  margin: 2px;
+  background: $pretty-senshi;
+}
+
+#homeLine {
+  flex: 0 0 60px;
+}
+
+#aboutLine {
+  flex: 0 0 70px;
+}
+
+#contactLine {
+  flex: 0 0 90px;
+}
+
+@media screen and (max-width: 879px) {
+  #title {
+    display: none;
+  }
+  #container {
+    justify-content: space-between;
+  }
+
+  #linkContainer {
+    flex: 0 0 300px;
+  }
+}

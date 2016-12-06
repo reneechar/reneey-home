@@ -1,0 +1,93 @@
+@import '_colors.scss';
+
+#title {
+  color: blue;
+}
+.description {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 320px;
+  text-align: center;
+}
+
+#spellcasters {
+  height: 320px;
+  width: 500px;
+  background: url("/assets/spellcasters.png");
+  background-size: 500px 320px;
+  position:relative;
+  &:hover .overlay {
+    display: block;
+  }
+}
+
+#kanban {
+  height: 320px;
+  width: 500px;
+  background: url("/assets/kanban.png");
+  background-size: 500px 320px;
+  position: relative;
+  &:hover .overlay {
+    display: block;
+  }
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 50px 0;
+  li {
+    flex: 0 0 500px;
+    margin: 30px;
+  }
+}
+
+.projectLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.githubLink {
+  height: 32px;
+  width: 32px;
+  background: url('/assets/GitHub-Mark-32px.png') no-repeat center;
+  background-color: $soulful-white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.overlay {
+  display: none;
+  width: 500px;
+  height: 320px;
+  background: $o-white;
+}
+
+@media screen and (max-width: 550px) {
+  #spellcasters {
+    flex: 0 0 100%;
+    width: auto;
+    margin: 0 30px;
+  }
+
+  #kanban {
+    flex: 0 0 100%;
+    width: auto;
+    margin: 0 30px;
+  }
+
+  #projects > li {
+    flex: 0 0 100%;
+  }
+
+  .description {
+
+  }
+}

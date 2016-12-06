@@ -1,0 +1,30 @@
+@import '_colors.scss';
+
+#container {
+  height: 60px;
+  background-color: $pretty-senshi;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  bottom: 0px;
+}
+
+#listUl {
+  display: flex;
+  justify-content: center;
+  li {
+    flex: 0 0 60px;
+    font-size: 12px;
+  }
+}
+
+.links {
+  text-decoration: none;
+  color: $soulful-white;
+}
+
+ul #copyright {
+  flex: 0 0 180px;
+  color: $soulful-white;
+}

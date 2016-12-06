@@ -1,0 +1,37 @@
+@import '_colors.scss';
+
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 40px 0;
+  div {
+    margin: 20px;
+  }
+}
+
+#portrait {
+  flex: 0 0 300px;
+  height: 300px;
+  background: url('/assets/self.jpg') no-repeat center;
+  background-size: 300px 300px;
+}
+
+#description {
+  flex: 0 0 500px;
+  height: 300px;
+  background: $yi-ding;
+}
+
+#map {
+  flex: 0 0 500px;
+  height: 300px;
+  background: $yi-ding;
+}
+
+@media screen and (max-width: 550px) {
+  #description {
+    flex: 0 0 300px;
+    height: 200px;
+  }
+}

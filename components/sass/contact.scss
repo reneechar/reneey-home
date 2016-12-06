@@ -1,0 +1,47 @@
+@import '_colors.scss';
+
+#container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 40px 0;
+  div {
+    margin: 20px;
+  }
+}
+
+#info {
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+#socialMedia {
+  flex: 0 0 180px;
+  height: 100px;
+  background: $yi-ding;
+}
+
+#contactInfo {
+  flex: 0 0 180px;
+  height: 100px;
+  background: $yi-ding;
+}
+
+#contactBox {
+  flex: 0 0 400px;
+  height: 400px;
+  background: $yi-ding;
+}
+
+@media screen and (max-width: 550px) {
+  #contactBox, #contactInfo {
+    display: none;
+  }
+
+  #socialMedia {
+    flex: 0 0 200px;
+    height: 500px;
+  }
+}
