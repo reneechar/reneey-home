@@ -10,6 +10,7 @@ class NavBar extends React.Component {
       <div id={styles.container}>
         <Link to='/' id={styles.logoLink}>
           <div id={styles.logo}>
+          RY
           </div>
         </Link>
 

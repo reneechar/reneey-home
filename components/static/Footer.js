@@ -8,7 +8,7 @@ class Footer extends React.Component {
     return (
       <div id={styles.container}>
         <ul id={styles.listUl}>
-          <li id={styles.copyright}>Copyright © 2016 reneey</li>
+          <li id={styles.copyright}>© 2016 Renee Y Char</li>
           <li><Link to='/' className={styles.links}>HOME</Link></li>
           <li><Link to='/about' className={styles.links}>ABOUT</Link></li>
           <li><Link to='/contact' className={styles.links}>CONTACT</Link></li>

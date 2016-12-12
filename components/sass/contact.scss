@@ -4,44 +4,69 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 40px 0;
-  div {
-    margin: 20px;
-  }
+  margin: 50px 0;
 }
 
-#info {
+#picture {
+  flex: 0 0 200px;
+  height: 200px;
+  background: url('/assets/self.jpg') no-repeat center;
+  background-size: 200px 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+#socialMedia {
   flex: 0 0 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  margin: 20px;
+
 }
 
-#socialMedia {
-  flex: 0 0 180px;
-  height: 100px;
-  background: $yi-ding;
+.icons {
+  height: 50px;
+  width: 50px;
+  background-size: 30px 30px;
+}
+#linkedIn {
+  background: url('/assets/in-black.png') no-repeat center;
+  &:hover {
+    background-color: $lilac-candy;
+    border-radius: 10%;
+    transition: 0.5s;
+  }
 }
 
-#contactInfo {
-  flex: 0 0 180px;
-  height: 100px;
-  background: $yi-ding;
+#gitHub {
+  background: url('/assets/GitHub-Mark-32px.png') no-repeat center;
+  &:hover {
+    background-color: $lilac-candy;
+    border-radius: 10%;
+    transition: 0.5s;
+  }
+}
+
+#medium {
+  background: url('/assets/medium-dark.png') no-repeat center;
+  &:hover {
+    background-color: $lilac-candy;
+    border-radius: 10%;
+    transition: 0.5s;
+  }
 }
 
 #contactBox {
   flex: 0 0 400px;
-  height: 400px;
-  background: $yi-ding;
-}
-
-@media screen and (max-width: 550px) {
-  #contactBox, #contactInfo {
-    display: none;
-  }
-
-  #socialMedia {
-    flex: 0 0 200px;
-    height: 500px;
+  margin: 30px;
+  text-align: center;
+  a {
+    color: $lilac-candy;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px dotted gray;
+    }
   }
 }
+

@@ -1,13 +1,17 @@
 @import '_colors.scss';
 
 #container {
-  height: 60px;
+  height: 100px;
+  width: 100%;
   background-color: $pretty-senshi;
-  margin: 0;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  bottom: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
 }
 
 #listUl {
@@ -22,9 +26,13 @@
 .links {
   text-decoration: none;
   color: $soulful-white;
+  &:hover {
+    color: $lilac-candy;
+    transition: 0.5s;
+  }
 }
 
 ul #copyright {
-  flex: 0 0 180px;
+  flex: 0 0 150px;
   color: $soulful-white;
 }

@@ -1,17 +1,15 @@
 @import '_colors.scss';
 
-#header {
-
-}
-
 #title {
   color: blue;
 }
 
 #container {
   margin: 0;
-  padding: 0;
+  padding-bottom: 6rem;
   font-family: 'Work Sans', sans-serif;
+  position: relative;
+  min-height: 100%;
 }
 
 
@@ -25,7 +23,6 @@ ul {
 body {
   background: $soulful-white;
 }
-
 
 /*resets*/
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,

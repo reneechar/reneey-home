@@ -7,7 +7,7 @@
   text-decoration: none;
   color: black;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
   line-height: 320px;
   text-align: center;
 }
@@ -19,7 +19,7 @@
   background-size: 500px 320px;
   position:relative;
   &:hover .overlay {
-    display: block;
+    visibility: visible;
   }
 }
 
@@ -30,7 +30,19 @@
   background-size: 500px 320px;
   position: relative;
   &:hover .overlay {
-    display: block;
+    visibility: visible;
+  }
+}
+
+#disruptArmy {
+  height: 320px;
+  width: 500px;
+  background: url("/assets/disrupt-army.png");
+  background-size: 500px 320px;
+  position: relative;
+  &:hover .overlay {
+    visibility: visible;
+    transition: 0.5s;
   }
 }
 
@@ -48,6 +60,10 @@
 .projectLinks {
   text-decoration: none;
   color: black;
+  &:hover {
+    color: $lilac-candy;
+    transition: 0.5s;
+  }
 }
 
 .githubLink {
@@ -64,30 +80,65 @@
 }
 
 .overlay {
-  display: none;
+  visibility: hidden;
   width: 500px;
   height: 320px;
   background: $o-white;
 }
 
+.mobileDescription, .mobileLink, .mobileGithubLink {
+  display: none;
+}
+
 @media screen and (max-width: 550px) {
-  #spellcasters {
-    flex: 0 0 100%;
-    width: auto;
+  #spellcasters, #kanban, #disruptArmy {
+    flex: 0 0 370px;
     margin: 0 30px;
+    height: 250px;
+    width: 370px;
+    background-size: 370px 250px;
   }
-
-  #kanban {
-    flex: 0 0 100%;
-    width: auto;
-    margin: 0 30px;
-  }
-
   #projects > li {
-    flex: 0 0 100%;
+    flex: 0 0 370px;
   }
-
   .description {
-
+    font-size: 15px;
+    line-height: 250px;
+  }
+  .overlay {
+    display: none;
+  }
+  .mobileDescription {
+    display: flex;
+    flex-flow: row wrap;
+    p {
+      flex: 0 0 100%;
+    }
+  }
+  .mobileLink {
+    display: block;
+    flex: 0 0 32px;
+    height: 32px;
+    border: 2px dotted $lilac-candy;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    line-height: 32px;
+  }
+  .mobileGithubLink {
+    display: block;
+    flex: 0 0 80px;
+    height: 32px;
+    width: 32px;
+    background: url('/assets/GitHub-Mark-32px.png') no-repeat center;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+    border: 2px dotted $lilac-candy;
+    &:active {
+      background-color: $yi-ding;
+    }
   }
 }
