@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../sass/about.scss';
-import key from '../../apiKey.json';
 class About extends React.Component {
 
   render() {
