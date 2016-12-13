@@ -2,8 +2,9 @@
 
 #container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
   margin: 50px 0;
   div {
     margin: 30px;
@@ -20,7 +21,8 @@
 }
 
 #description {
-  flex: 0 0 500px;
+  flex: 0 0 0;
+  width: 500px;
 }
 
 #tools {
@@ -52,7 +54,8 @@
     margin: 20px 5px;
   }
   #description {
-    flex: 0 0 350px;
+    flex: 0 0 0;
+    width: 350px;
     text-align: center;
   }
   #tools {

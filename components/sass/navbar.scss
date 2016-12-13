@@ -5,7 +5,7 @@
   flex: 0 0 80px;
   height: 80px;
   line-height: 80px;
-  background: $yi-ding;
+  background: $lilac-candy;
   margin: 15px;
   font-size: 50px;
   font-family: 'Averia Libre', cursive;
@@ -13,7 +13,7 @@
   vertical-align: middle;
   border-radius: 50%;
   &:hover {
-    background: $lilac-candy;
+    background: $yi-ding;
     transition: 0.5s;
   }
 }
@@ -26,7 +26,6 @@
 
 #container {
   background-color: $pretty-senshi;
-  // background-color: $lilac-candy;
   height: 100px;
   margin: 0;
   display: flex;
@@ -37,7 +36,7 @@
 }
 
 #linkContainer {
-  flex: 0 0 300px;
+  flex: 0 0 450px;
   display: flex;
   align-items: center;
 }
@@ -47,11 +46,15 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 5px;
+  margin: 15px;
 }
 
 #homeLi {
   flex: 0 0 60px;
+}
+
+#projectsLi {
+  flex: 0 0 95px;
 }
 
 #aboutLi {
@@ -84,6 +87,10 @@
   flex: 0 0 60px;
 }
 
+#projectsLine {
+  flex: 0 0 95px;
+}
+
 #aboutLine {
   flex: 0 0 70px;
 }
@@ -92,15 +99,206 @@
   flex: 0 0 90px;
 }
 
+.outerMenu {
+  display: none;
+}
+
 @media screen and (max-width: 879px) {
-  #title {
-    display: none;
-  }
   #container {
     justify-content: space-between;
   }
-
   #linkContainer {
-    flex: 0 0 300px;
+    display: none;
+  }
+
+  //source for mobile menu: http://codepen.io/brenden/pen/VLjKMQ?editors=1100
+  $anim-duration: 0.3s;
+
+  .link,
+  .link:visited,
+  .link:hover,
+  .link:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .outerMenu {
+    flex: 0 0 80px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+
+    .checkboxToggle {
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      opacity: 0;
+
+      &:checked {
+        & + .hamburger {
+          > div {
+            transform: rotate(135deg);
+
+            &:before,
+            &:after {
+              top: 0;
+              transform: rotate(90deg);
+            }
+
+            &:after {
+              opacity: 0;
+            }
+          }
+        }
+
+        & ~ .menu  {
+          pointer-events: auto;
+          visibility: visible;
+
+          > div {
+            transform: scale(1);
+            transition-duration: .75s;
+
+            > div {
+              opacity: 1;
+              transition: opacity $anim-duration ease $anim-duration;
+            }
+          }
+        }
+      }
+
+      &:hover + .hamburger {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, .1);
+        background: $yi-ding;
+        transition: 0.3s ease;
+      }
+
+      &:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+      }
+    }
+
+    .hamburger {
+      position: absolute;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      margin: auto;
+      background: $lilac-candy;
+      border-radius: 5%;
+      cursor: pointer;
+      transition: box-shadow $anim-duration ease;
+      backface-visibility: hidden;
+
+      > div {
+        position: relative;
+        flex: none;
+        width: 100%;
+        height: 2px;
+        background: white;
+        transition: all $anim-duration ease;
+        margin: 13px auto;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          height: 2px;
+          top: -9px;
+          width: 100%;
+          background: inherit;
+          transition: all $anim-duration ease;
+        }
+        &:after {
+          top: 9px;
+        }
+      }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      visibility: hidden;
+      overflow: hidden;
+      backface-visibility: hidden;
+      outline: 1px solid transparent;
+
+      > div {
+        width: 200vw;
+        height: 100%;
+        color: $soulful-white;
+        background: $o-tears;
+        transition: all $anim-duration ease;
+        flex: none;
+        transform: scale(0);
+        backface-visibility: hidden;
+        overflow: hidden;
+
+        > div {
+          text-align: center;
+          max-width: 90vw;
+          max-height: 100vh;
+          margin: 100px 20px;
+          opacity: 0;
+          transition: opacity $anim-duration ease;
+          overflow-y: auto;
+          flex: none;
+
+          > ul {
+            list-style: none;
+            padding: 0 1em;
+            margin: 0;
+            display: block;
+            max-height: 100vh;
+
+            > li {
+              padding: 0;
+              margin: 1em;
+              font-size: 24px;
+              display: block;
+
+              > a {
+                position: relative;
+                display: inline;
+                cursor: pointer;
+                transition: color $anim-duration ease;
+
+                &:hover {
+                  color: darken($tears-in-your-eyes, 15%);
+
+                  &:after {
+                    height: 2px;
+                    left: 0;
+                    bottom: -0.15em;
+                    width: 100%;
+                  }
+                }
+
+                &:after {
+                  content: '';
+                  position: absolute;
+                  z-index: 1;
+                  bottom: -.15em;
+                  left: 0;
+                  width: 0;
+                  background: darken($tears-in-your-eyes, 15%);
+                  transition: width $anim-duration ease;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
