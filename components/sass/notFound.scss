@@ -1,7 +1,29 @@
-#header {
+@import '_colors.scss';
 
+#container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 300px;
 }
 
 #title {
-  color: blue;
+  color: $yi-ding;
+  font-size: 60px;
+  margin: 50px auto;
+}
+
+#description {
+  font-size: 20px;
+  margin: 0 10px 50px 10px;
+}
+
+#link {
+  color: $yi-ding;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 550px) {
+  #container {
+    margin-bottom: 150px;
+  }
 }

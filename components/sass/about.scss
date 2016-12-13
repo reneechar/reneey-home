@@ -11,10 +11,12 @@
 }
 
 #portrait {
-  flex: 0 0 100%;
+  flex: 0 0 300px;
   height: 300px;
+  width: 300px;
   background: url('/assets/self.jpg') no-repeat center;
   background-size: 300px;
+  border-radius: 2%;
 }
 
 #description {
@@ -51,6 +53,7 @@
   }
   #description {
     flex: 0 0 350px;
+    text-align: center;
   }
   #tools {
     flex: 0 0 90%;
