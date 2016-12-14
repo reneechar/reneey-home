@@ -7,9 +7,11 @@ class App extends React.Component {
   render() {
     return (
       <div id={styles.container}>
-        <NavBar/>
-        <div>
-          {this.props.children}
+        <div id={styles.upper}>
+          <NavBar/>
+          <div>
+            {this.props.children}
+          </div>
         </div>
         <Footer/>
       </div>

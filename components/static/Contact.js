@@ -5,6 +5,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div id={styles.container}>
+        <h1 id={styles.title}>Contact Me</h1>
         <div id={styles.picture}>
         </div>
         <div id={styles.socialMedia}>
@@ -19,7 +20,7 @@ class Contact extends React.Component {
           </a>
         </div>
         <div id={styles.contactBox}>
-          contact me at <a href="mailto:reneeycontact@gmail.com">reneeycontact@gmail.com</a>
+          <a href="mailto:reneeycontact@gmail.com">reneeycontact@gmail.com</a>
         </div>
       </div>
     )

@@ -25,6 +25,7 @@ class About extends React.Component {
           within a 3 month timespan.
         </div>
         <div id={styles.tools}>
+          <h1 className={styles.title}>Technical Skills</h1>
           <ul id={styles.toolList}>
             <li>AngularJS</li>
             <li>React</li>

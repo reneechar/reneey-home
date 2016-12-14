@@ -55,7 +55,7 @@ class Projects extends React.Component {
 
 
     return (
-      <div>
+      <div id={styles.container}>
         <ul id={styles.projects}>
           <li>{spellcastersElement}</li>
           <li className={styles.mobileDescription}>

@@ -12,7 +12,7 @@
   flex: 0 0 300px;
   height: 300px;
   width: 300px;
-  margin: 30px;
+  margin: 30px 0;
   background: url('/assets/self.jpg') no-repeat center;
   background-size: 300px;
   border-radius: 2%;
@@ -21,6 +21,14 @@
 #description {
   flex: 0 0 0;
   width: 800px;
+  margin: 30px 0;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  color: $yi-ding;
+  margin: 30px 0;
 }
 
 #tools {
