@@ -8,21 +8,9 @@ class About extends React.Component {
         <div id={styles.portrait}>
         </div>
         <div id={styles.description}>
-          Hello! My name is Renee and I am a Full Stack Web Developer.
-          My origin as a Web Developer began when I was working as a hospital
-          administrator in Boston. Work was becoming less challenging and
-          I had already taken up the responsibilities of 3 different positions
-          in the clinic. I wanted to gain a technical skill, so I began learning
-          how to code online. Soon after, I realized that the website for
-          my department was outdated and needed improvement. I excitedly began
-          creating my updated version and I displayed it to my supervisor.
-          I was disappointed to hear that I would not be allowed to continue
-          working on it as the hospital had their own Web Development team. From
-          this experiece, I discovered that I had a true passion for creating web
-          applications. Deciding to follow my passion, I quit my job in Boston and moved
-          to Hawaii to study Web Development. I was accepted by DevLeague,
-          Hawaii's premier coding bootcamp, where I underwent 800+ hours of coding
-          within a 3 month timespan.
+          Hello! My name is Renee and I am a Full Stack Web Developer. My origin as a Web Developer began when I was working as a hospital administrator in Boston.  I constantly sought more responsibilities in the clinic to gain a larger understanding of the department as a whole. After a year at the hospital, I was regularly performing duties of three other positions in the clinic. I was awarded with the team player recognition for my proactive outreach and commitment to going above and beyond for our patients and our staff. Through this experience, I began to see how simple technical shortcomings within the hospital’s infrastructure could be improved to dramatically enhance patient experience and flow.
+          I committed to web development as a career path when I left my position at the hospital to join DevLeague, Hawaii’s premier coding bootcamp. In 3 months, I went from creating static HTML and CSS pages to creating and deploying full-stack single page applications.
+          My dream is to create web applications that improves the lives of others.
         </div>
         <div id={styles.tools}>
           <h1 className={styles.title}>Technical Skills</h1>
